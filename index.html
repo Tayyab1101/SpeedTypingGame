@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>SpeedTypingGame</title>
+  </head>
+  <body class="bg-dark text-white">
+    <header class="bg-secondary text-center p-2 mb-3">
+      <h1>WordBeater</h1>
+    </header>
+    <div class="container text-center">
+      <!-- Word & Input -->
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <p class="lead" title="You can set the time limit">
+            Type The Given Word Within
+            <input class="text-success" title="Set Time Limit" id="seconds" value="5" style="max-width: 14px;background-color: #1e2022;border-width: 0;border-radius: 4px; text-align: center;padding: 0;"></input> Seconds:
+          </p>
+          <h2 class="display-2 mb-3" id="current-word">hello</h2>
+          <input
+            type="text"
+            class="form-control
+                form-control-lg"
+            placeholder="Start typing..."
+            id="word-input"
+            autofocus
+          />
+          <h4 class="mt-2" id="message"></h4>
+
+          <!-- Time & Score Columns -->
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <h3>
+                Time Left:
+                <span id="time">0</span>
+              </h3>
+            </div>
+            <div class="col-md-6">
+              <h3>
+                Score:
+                <span id="score">0</span>
+              </h3>
+            </div>
+          </div>
+
+          <!-- Instructions -->
+          <div class="row mt-2">
+            <div class="col-md-6">
+              <div class="card card-body bg-secondary text-white">
+                <h5>Instructions</h5>
+                <p>
+                  Type each word in the given amount of seconds to score. To
+                  play again, just type the current word. You score will reset
+                </p>
+              </div>
+            </div>
+            <!-- Highscore -->
+            <div class="col-md-6">
+              <div class="card card-body bg-secondary text-white">
+                <h5>Highscore</h5>
+                <p class="text-success">
+                  <h1 style="font-size:5rem;" id="hs">00</h1>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
